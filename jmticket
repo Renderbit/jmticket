@@ -1,0 +1,1132 @@
+                                                <!DOCTYPE html>
+                                                <html lang="ko">
+                                                <head>
+                                                    <meta charset="UTF-8">
+                                                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                    <title>정밀티켓 - 빠르고 안전한 현금화 전문업체</title>
+                                                    <script src="https://cdn.tailwindcss.com"></script>
+                                                    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+                                                    <style>
+                                                        body {
+                                                            font-family: 'Noto Sans KR', sans-serif;
+                                                        }
+                                                        .hero-bg {
+                                                            background: 
+                                                                linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.9) 50%, rgba(6, 182, 212, 0.9) 100%),
+                                                                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+                                                            background-size: cover;
+                                                            background-position: center;
+                                                            position: relative;
+                                                            overflow: hidden;
+                                                        }
+                                                        .hero-bg::before {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/></pattern></defs><rect width="1000" height="1000" fill="url(%23grid)"/></svg>');
+                                                            opacity: 0.5;
+                                                        }
+                                                        .hero-bg::after {
+                                                            content: '';
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            background: 
+                                                                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                                                                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                                                                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 0%, transparent 50%);
+                                                            animation: float-bg 12s ease-in-out infinite;
+                                                        }
+                                                        .floating-animation {
+                                                            animation: floating 6s ease-in-out infinite;
+                                                        }
+                                                        @keyframes floating {
+                                                            0%, 100% { transform: translateY(0px); }
+                                                            50% { transform: translateY(-15px); }
+                                                        }
+                                                        .pulse-glow {
+                                                            animation: pulse-glow 2s infinite;
+                                                        }
+                                                        @keyframes pulse-glow {
+                                                            0%, 100% { 
+                                                                box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+                                                            }
+                                                            50% { 
+                                                                box-shadow: 0 0 35px rgba(34, 197, 94, 0.9);
+                                                            }
+                                                        }
+                                                        .gradient-text {
+                                                            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+                                                            -webkit-background-clip: text;
+                                                            -webkit-text-fill-color: transparent;
+                                                            background-clip: text;
+                                                        }
+                                                        .card-hover {
+                                                            transition: all 0.3s ease;
+                                                        }
+                                                        .card-hover:hover {
+                                                            transform: translateY(-8px);
+                                                            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                                                        }
+                                                        .service-icon {
+                                                            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+                                                            animation: icon-pulse 3s ease-in-out infinite;
+                                                        }
+                                                        @keyframes icon-pulse {
+                                                            0%, 100% { transform: scale(1); }
+                                                            50% { transform: scale(1.05); }
+                                                        }
+                                                        .review-bg {
+                                                            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                                                        }
+                                                        .cta-fixed {
+                                                            position: fixed;
+                                                            bottom: 20px;
+                                                            right: 20px;
+                                                            z-index: 1000;
+                                                            animation: bounce 2s infinite;
+                                                        }
+                                                        @keyframes bounce {
+                                                            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+                                                            40%, 43% { transform: translateY(-10px); }
+                                                            70% { transform: translateY(-5px); }
+                                                        }
+                                                        .animate-fade-in {
+                                                            animation: fadeIn 0.8s ease-in-out both;
+                                                        }
+                                                        @keyframes fadeIn {
+                                                            from { 
+                                                                opacity: 0; 
+                                                                transform: translateY(10px); 
+                                                            }
+                                                            to { 
+                                                                opacity: 1; 
+                                                                transform: translateY(0); 
+                                                            }
+                                                        }
+                                                        @keyframes float-bg {
+                                                            0%, 100% { 
+                                                                transform: translateY(0) rotate(0deg); 
+                                                            }
+                                                            33% { 
+                                                                transform: translateY(-5px) rotate(1deg); 
+                                                            }
+                                                            66% { 
+                                                                transform: translateY(5px) rotate(-1deg); 
+                                                            }
+                                                        }
+                                                    </style>
+                                                </head>
+                                                <body class="bg-gray-50">
+                                                    <!-- Hero Section -->
+                                                    <section class="hero-bg min-h-[70vh] flex items-center justify-center relative">
+                                                        <div class="container mx-auto px-6 text-center relative z-10 py-12">
+                                                            <div class="floating-animation">
+                                                                <h1 class="text-4xl md:text-6xl font-black text-white mb-3 leading-tight">
+                                                                    정밀<span class="text-cyan-300">티켓</span>
+                                                                </h1>
+                                                                <h2 class="text-xl md:text-2xl text-white/95 mb-4 font-bold">
+                                                                    소액결제 현금화&신용카드 현금화 전문업체
+                                                                </h2>
+                                                                <p class="text-base md:text-lg text-white/80 mb-6 max-w-5xl mx-auto font-medium leading-relaxed">
+                                                                    빠르고 안전한 현금화 전문업체<br>
+                                                                    <span class="text-cyan-300 font-bold">업계최저 수수료율</span>과 <span class="text-green-300 font-bold">빠른 입금</span>으로 신뢰받는 서비스<br>
+                                                                    <span class="text-yellow-300 font-semibold">✓ NAVER 정식 등록업체</span>
+                                                                </p>
+                                                            </div>
+
+                                                            <!-- 메인 CTA 버튼 -->
+                                                            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                                                                <a href="tel:010-5925-1600" 
+                                                                   class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 pulse-glow flex items-center justify-center gap-3 min-w-[220px] shadow-2xl">
+                                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                                                    </svg>
+                                                                    전화 상담
+                                                                </a>
+                                                                <a href="https://open.kakao.com/o/ss3EZlDh" target="_blank"
+                                                                   class="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 flex items-center justify-center gap-3 min-w-[220px] shadow-2xl">
+                                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                                                    </svg>
+                                                                    카톡 상담
+                                                                </a>
+                                                            </div>
+
+                                                            <!-- 인증 배지 -->
+                                                            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-8">
+                                                                <div class="bg-white/15 backdrop-blur-md rounded-full px-4 py-2 border border-white/30 flex items-center gap-2">
+                                                                    <div class="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                                                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="text-white font-semibold text-sm">안전보장 최저 수수료</span>
+                                                                </div>
+                                                                <div class="bg-white/15 backdrop-blur-md rounded-full px-4 py-2 border border-white/30 flex items-center gap-2">
+                                                                    <div class="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                                                                        <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="text-white font-semibold text-sm">개인정보 완벽보호 업계 최저 수수료율 지급</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 핵심 포인트 -->
+                                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                                                                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                                                                    <div class="text-2xl mb-2">⚡</div>
+                                                                    <h3 class="text-white font-bold text-base mb-1">신청 즉시</h3>
+                                                                    <p class="text-white/80 text-sm">1분 내 실시간 빠른입금</p>
+                                                                </div>
+                                                                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                                                                    <div class="text-2xl mb-2">🔒</div>
+                                                                    <h3 class="text-white font-bold text-base mb-1">안전 보장</h3>
+                                                                    <p class="text-white/80 text-sm">개인정보 완전 보호</p>
+                                                                </div>
+                                                                <div class="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                                                                    <div class="text-2xl mb-2">💰</div>
+                                                                    <h3 class="text-white font-bold text-base mb-1">최저 수수료</h3>
+                                                                    <p class="text-white/80 text-sm">업계 최저 수수료 제공</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 실시간 현황 Section -->
+                                                    <section class="py-16 bg-gradient-to-r from-orange-50 to-yellow-50">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+                                                                <!-- 좌측 텍스트 -->
+                                                                <div class="lg:w-1/2">
+                                                                    <div class="mb-4">
+                                                                        <span class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                                                                            365일 연중무휴!
+                                                                        </span>
+                                                                    </div>
+                                                                    <h2 class="text-4xl md:text-5xl font-black text-gray-800 mb-6 leading-tight">
+                                                                        신청즉시!<br>
+                                                                        <span class="text-orange-500">1분내 실시간</span><br>
+                                                                        현금입금
+                                                                    </h2>
+                                                                    <p class="text-lg text-gray-600 mb-8">
+                                                                        지금 이순간에도 많은 고객들이 편리하게 이용하고 있습니다
+                                                                    </p>
+                                                                    <div class="flex flex-col sm:flex-row gap-4">
+                                                                        <a href="tel:010-5925-1600" 
+                                                                           class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 flex items-center justify-center gap-3">
+                                                                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                                                            </svg>
+                                                                            바로 신청하기
+                                                                        </a>
+                                                                        <a href="https://open.kakao.com/o/ss3EZlDh" target="_blank"
+                                                                           class="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 flex items-center justify-center gap-3">
+                                                                            💬 카톡 상담하기
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 우측 실시간 현황 테이블 -->
+                                                                <div class="lg:w-1/2">
+                                                                    <div class="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+                                                                        <div class="flex items-center justify-between mb-6">
+                                                                            <h3 class="text-xl font-bold text-gray-800">🔥 실시간 진행 현황</h3>
+                                                                            <div class="flex items-center gap-2">
+                                                                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                                                                <span class="text-sm text-gray-500">LIVE</span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="space-y-4">
+                                                                            <!-- 테이블 헤더 -->
+                                                                            <div class="grid grid-cols-3 gap-4 pb-3 border-b border-gray-200">
+                                                                                <div class="text-sm font-semibold text-gray-600">이름</div>
+                                                                                <div class="text-sm font-semibold text-gray-600">카드사</div>
+                                                                                <div class="text-sm font-semibold text-gray-600">진행금액</div>
+                                                                            </div>
+
+                                                                            <!-- 실시간 데이터 행들 -->
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in">
+                                                                                <div class="text-gray-800 font-medium">주**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-orange-600">💳</span>
+                                                                                    <span class="text-gray-600">컬쳐랜드상품권</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">500,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 0.5s;">
+                                                                                <div class="text-gray-800 font-medium">박**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-blue-600">📱</span>
+                                                                                    <span class="text-gray-600">휴대폰소액결제</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">800,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 1s;">
+                                                                                <div class="text-gray-800 font-medium">장**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-yellow-600">⭐</span>
+                                                                                    <span class="text-gray-600">KB국민카드</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">3,900,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 1.5s;">
+                                                                                <div class="text-gray-800 font-medium">이**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-blue-500">💙</span>
+                                                                                    <span class="text-gray-600">우리카드</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">8,000,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 animate-fade-in" style="animation-delay: 2s;">
+                                                                                <div class="text-gray-800 font-medium">최**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-purple-600">🎁</span>
+                                                                                    <span class="text-gray-600">해피머니상품권</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">1,200,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 2s;">
+                                                                                <div class="text-gray-800 font-medium">최**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-purple-600">🎁</span>
+                                                                                    <span class="text-gray-600">해피머니상품권</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">1,200,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 2.5s;">
+                                                                                <div class="text-gray-800 font-medium">정**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-red-600">💎</span>
+                                                                                    <span class="text-gray-600">신한카드</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">2,500,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 3s;">
+                                                                                <div class="text-gray-800 font-medium">조**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-green-600">🟢</span>
+                                                                                    <span class="text-gray-600">하나카드</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">6,700,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 3.5s;">
+                                                                                <div class="text-gray-800 font-medium">윤**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-indigo-600">🎯</span>
+                                                                                    <span class="text-gray-600">문화상품권</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">850,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 border-b border-gray-100 animate-fade-in" style="animation-delay: 4s;">
+                                                                                <div class="text-gray-800 font-medium">한**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-pink-600">💳</span>
+                                                                                    <span class="text-gray-600">삼성카드</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">4,300,000<span class="text-sm">원</span></div>
+                                                                            </div>
+
+                                                                            <div class="grid grid-cols-3 gap-4 py-3 animate-fade-in" style="animation-delay: 4.5s;">
+                                                                                <div class="text-gray-800 font-medium">강**</div>
+                                                                                <div class="flex items-center gap-2">
+                                                                                    <span class="text-amber-600">📱</span>
+                                                                                    <span class="text-gray-600">휴대폰소액결제</span>
+                                                                                </div>
+                                                                                <div class="text-green-600 font-bold">500,000<span class="text-sm">원</span></div>
+                                                                            </div>
+                                                                            </div>
+
+
+                                                                            </div>
+
+                                                                        <!-- 하단 상태 -->
+                                                                        <div class="mt-6 pt-4 border-t border-gray-200">
+                                                                            <div class="flex items-center justify-between text-sm">
+                                                                                <span class="text-gray-500">오늘 처리완료</span>
+                                                                                <span class="text-orange-600 font-bold">147건</span>
+                                                                            </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 특징 Section -->
+                                                    <section class="py-20 bg-gradient-to-r from-green-50 to-emerald-50">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="text-center mb-16">
+                                                                <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+                                                                    왜 많은 고객들이 정밀티켓을 선택할까요?
+                                                                </h2>
+                                                                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                                                                    소액결제 한도&신용카드 결제한도 현금화 전문업체이면서 저렴한 수수료를 자랑합니다
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
+                                                                <!-- 카드현금화 93% 지급률 -->
+                                                                <div class="text-center">
+                                                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex flex-col items-center justify-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                                                        <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v2h12V6H4zm12 4H4v4h12v-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <div class="text-xs font-semibold">카드현금화</div>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-black text-green-600 mb-1">93% 지급률</h3>
+                                                                    <p class="text-gray-600 text-sm font-medium">업계 최저 수수료</p>
+                                                                </div>
+
+                                                                <!-- 365일 24시간 연중무휴 상담 -->
+                                                                <div class="text-center">
+                                                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex flex-col items-center justify-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                                                        <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <div class="text-xs font-semibold">365일 24시간</div>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-black text-green-600 mb-1">연중무휴 상담</h3>
+                                                                    <p class="text-gray-600 text-sm font-medium">언제든 빠른 상담</p>
+                                                                </div>
+
+                                                                <!-- 업계/후기수 1위 -->
+                                                                <div class="text-center">
+                                                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex flex-col items-center justify-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                                                        <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                                                        </svg>
+                                                                        <div class="text-xs font-semibold">업계/후기수</div>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-black text-green-600 mb-1">1위</h3>
+                                                                    <p class="text-gray-600 text-sm font-medium">검증된 신뢰도</p>
+                                                                </div>
+
+                                                                <!-- 안전하고 신속한 업체! 5회 무사고 -->
+                                                                <div class="text-center">
+                                                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex flex-col items-center justify-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                                                        <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <div class="text-xs font-semibold">안전하고 신속한 업체!</div>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-black text-green-600 mb-1">5년 무사고</h3>
+                                                                    <p class="text-gray-600 text-sm font-medium">완벽한 보안 시스템</p>
+                                                                </div>
+
+                                                                <!-- 모든카드 신용조회 X -->
+                                                                <div class="text-center">
+                                                                    <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex flex-col items-center justify-center text-white shadow-2xl transform hover:scale-105 transition-all duration-300">
+                                                                        <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <div class="text-xs font-semibold">모든카드</div>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-black text-green-600 mb-1">신용조회 X</h3>
+                                                                    <p class="text-gray-600 text-sm font-medium">신용등급 영향 없음</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 서비스 소개 Section -->
+                                                    <section class="py-20 bg-white">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="text-center mb-16">
+                                                                <h2 class="text-4xl md:text-5xl font-black gradient-text mb-6">
+                                                                    제공 서비스
+                                                                </h2>
+                                                                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+                                                                    다양한 서비스를 한곳에서 빠르고 안전하게
+                                                                </p>
+                                                                <!-- 신뢰 인증 배지 -->
+                                                                <div class="flex flex-wrap justify-center items-center gap-6">
+                                                                    <div class="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full">
+                                                                        <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <span class="text-blue-800 font-semibold">NAVER 등록업체</span>
+                                                                    </div>
+                                                                    <div class="flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full">
+                                                                        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                        <span class="text-green-800 font-semibold">5년 무사고 운영</span>
+                                                                    </div>
+                                                                    <div class="flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full">
+                                                                        <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                                        </svg>
+                                                                        <span class="text-purple-800 font-semibold">정식 사업자등록업체</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                                                                <!-- 소액결제 현금화 -->
+                                                                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                                                                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                                                                            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">소액결제 현금화</h3>
+                                                                    <ul class="text-gray-600 space-y-3 mb-6">
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                                                            100만원까지 가능
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                                                            미납/정책 99.9% 승인가능
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                                                            SKT/KT/U+/알뜰폰 모두가능
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="text-center">
+                                                                        <span class="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold">
+                                                                            최대 82% 지급가능
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- 카드 현금화 -->
+                                                                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                                                                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2v2h12V6H4zm12 4H4v4h12v-4z" clip-rule="evenodd"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">신용카드 현금화</h3>
+                                                                    <ul class="text-gray-600 space-y-3 mb-6">
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                                                            500만원까지 가능
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                                                            본인 신용카드 한도에서
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                                                            최대 80% 지급가능
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="text-center">
+                                                                        <span class="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold">
+                                                                            최대 93% 수수료율
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!-- 정보이용료 현금화 -->
+                                                                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                                                                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                                                                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">정보이용료 현금화</h3>
+                                                                    <ul class="text-gray-600 space-y-3 mb-6">
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                                            100만원까지 가능
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                                            구글 플레이 가능
+                                                                        </li>
+                                                                        <li class="flex items-center gap-3">
+                                                                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                                                            SKT/KT/U+/알뜰폰 모두가능
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="text-center">
+                                                                        <span class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold">
+                                                                            최대 80% 지급가능
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 이용 과정 Section -->
+                                                    <section class="py-20 bg-gradient-to-r from-blue-50 to-cyan-50">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="text-center mb-16">
+                                                                <h2 class="text-4xl md:text-5xl font-black gradient-text mb-6">
+                                                                    간편한 이용 과정
+                                                                </h2>
+                                                                <p class="text-xl text-gray-600">
+                                                                    3단계로 끝나는 간편하고 빠른 일처리
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                                                                <div class="text-center">
+                                                                    <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                                                        1
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4">상담 신청</h3>
+                                                                    <p class="text-gray-600 leading-relaxed">
+                                                                        전화 또는 카카오톡으로<br>
+                                                                        간편하게 상담 신청
+                                                                    </p>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                                                        2
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4">견적 확인</h3>
+                                                                    <p class="text-gray-600 leading-relaxed">
+                                                                        최저 수수료율로<br>
+                                                                        정확한 견적 제공
+                                                                    </p>
+                                                                </div>
+                                                                <div class="text-center">
+                                                                    <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                                                                        3
+                                                                    </div>
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4">즉시 입금</h3>
+                                                                    <p class="text-gray-600 leading-relaxed">
+                                                                        거래 완료 후<br>
+                                                                        1분 내 계좌 입금
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 후기 Section -->
+                                                    <section class="py-20 review-bg">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="text-center mb-16">
+                                                                <h2 class="text-4xl md:text-5xl font-black gradient-text mb-6">
+                                                                    고객 후기
+                                                                </h2>
+                                                                <p class="text-xl text-gray-600">
+                                                                    실제 이용 고객들의 생생한 후기
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "급하게 현금이 필요했는데 정말 빠르게 처리해주셨어요. 수수료도 다른 곳보다 훨씬 좋고 친절하게 설명해주셔서 안심하고 거래할 수 있었습니다."
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            김
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">김○○님</div>
+                                                                            <div class="text-sm text-gray-500">상품권 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "소액결제 현금화 처음 해봤는데 생각보다 간단하고 안전하게 진행됐어요. 담당자분도 상세히 설명해주시고 신뢰가 갔습니다."
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            이
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">이○○님</div>
+                                                                            <div class="text-sm text-gray-500">소액결제 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "카드 현금화 여러 곳 알아봤는데 여기가 수수료도 제일 좋고 입금도 정말 빨라요. 앞으로 계속 이용할 예정입니다."
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            박
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">박○○님</div>
+                                                                            <div class="text-sm text-gray-500">카드 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "24시간 상담이 정말 도움됐어요. 새벽에 급한 일이 생겼는데도 바로 연락받아주시고 당일 처리해주셔서 감사했습니다."
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            최
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">최○○님</div>
+                                                                            <div class="text-sm text-gray-500">문화상품권 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "여러 업체 비교해봤는데 정밀티켓이 제일 신뢰할 만했어요. 과정도 투명하고 수수료도 만족스럽습니다. 추천드려요!"
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            정
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">정○○님</div>
+                                                                            <div class="text-sm text-gray-500">해피머니 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                                                    <div class="flex items-center mb-4">
+                                                                        <div class="flex text-yellow-400 text-xl mb-2">
+                                                                            ★★★★★
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                                                        "5년 무사고라는 말이 정말 믿음이 갔어요. 개인정보 보호도 철저하고 처리 속도도 빨라서 매우 만족합니다."
+                                                                    </p>
+                                                                    <div class="flex items-center">
+                                                                        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                                                            조
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="font-semibold text-gray-800">조○○님</div>
+                                                                            <div class="text-sm text-gray-500">신한카드 현금화</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 자주 묻는 질문 Section -->
+                                                    <section class="py-20 bg-gray-50">
+                                                        <div class="container mx-auto px-6">
+                                                            <div class="text-center mb-16">
+                                                                <h2 class="text-4xl md:text-5xl font-black gradient-text mb-6">
+                                                                    자주 묻는 질문
+                                                                </h2>
+                                                                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                                                                    고객들이 가장 궁금해하는 질문들을 모았습니다
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="max-w-4xl mx-auto space-y-4">
+                                                                <!-- FAQ 1 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">🤔 현금화는 어떤 방식으로 진행되나요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                상품권이나 소액결제 한도를 이용하여 상품을 구매하신 후, 저희가 해당 상품을 매입하여 현금으로 지급해드리는 방식입니다. 
+                                                                                모든 과정은 합법적이며 안전하게 진행되며, 개인정보는 철저히 보호됩니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- FAQ 2 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">⏰ 입금까지 얼마나 걸리나요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                거래 완료 후 <strong class="text-blue-600">1분 이내</strong>에 고객님의 계좌로 입금됩니다. 
+                                                                                은행 점검 시간이나 주말/공휴일에는 다소 지연될 수 있지만, 평일 오전 9시~오후 6시에는 즉시 입금 가능합니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- FAQ 3 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">💰 수수료율은 어떻게 되나요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                • <strong class="text-green-600">소액결제 현금화:</strong> 최대 82% 지급<br>
+                                                                                • <strong class="text-blue-600">카드 현금화:</strong> 최대 93% 지급<br>
+                                                                                • <strong class="text-purple-600">상품권 현금화:</strong> 최대 96% 지급<br><br>
+                                                                                수수료율은 거래 금액과 카드사에 따라 차이가 있으며, 상담 시 정확한 수수료를 안내해드립니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- FAQ 4 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">🔒 개인정보는 안전한가요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                네, 완전히 안전합니다. 저희는 <strong class="text-blue-600">NAVER 등록업체</strong>이며 <strong class="text-green-600">5년 무사고</strong> 운영 중입니다. 
+                                                                                모든 개인정보는 암호화되어 저장되며, 거래 완료 후 즉시 파기됩니다. 제3자에게 절대 제공하지 않습니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- FAQ 5 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">📱 어떤 상품권/카드를 취급하나요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                <strong class="text-orange-600">상품권:</strong> 문화상품권, 해피머니, 컬쳐랜드, 온누리상품권, 스마트문상 등 모든 상품권<br>
+                                                                                <strong class="text-blue-600">소액결제:</strong> SKT, KT, LG U+ 모든 통신사<br>
+                                                                                <strong class="text-purple-600">카드:</strong> 국민, 신한, 하나, 우리, 삼성, 현대, 롯데 등 모든 카드사<br><br>
+                                                                                기타 궁금한 상품권이나 카드가 있으시면 언제든 문의해주세요!
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- FAQ 6 -->
+                                                                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                                                                    <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+                                                                        <h3 class="text-lg font-bold text-gray-800">❓ 신용등급에 영향이 있나요?</h3>
+                                                                        <svg class="faq-icon w-6 h-6 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                                        <div class="px-8 pb-6">
+                                                                            <p class="text-gray-600 leading-relaxed">
+                                                                                <strong class="text-red-600">전혀 영향이 없습니다!</strong> 저희 서비스는 신용조회를 하지 않으며, 
+                                                                                일반적인 상품 구매와 동일한 형태이므로 신용등급이나 신용정보에 어떠한 영향도 주지 않습니다. 
+                                                                                안심하고 이용하실 수 있습니다.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 추가 문의 CTA -->
+                                                            <div class="text-center mt-16">
+                                                                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
+                                                                    <h3 class="text-2xl font-bold text-gray-800 mb-4">💬 더 궁금한 점이 있으신가요?</h3>
+                                                                    <p class="text-gray-600 mb-6">언제든지 편하게 연락주세요. 친절하게 상담해드립니다!</p>
+                                                                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                                                        <a href="tel:010-5925-1600" 
+                                                                           class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-3">
+                                                                            📞 전화 상담
+                                                                        </a>
+                                                                        <a href="https://open.kakao.com/o/ss3EZlDh" target="_blank"
+                                                                           class="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold transition-all duration-300 flex items-center justify-center gap-3">
+                                                                            💬 카톡 상담
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- 연락처 Section -->
+                                                    <section class="py-20 bg-gray-900 text-white">
+                                                        <div class="container mx-auto px-6 text-center">
+                                                            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                                                                지금 바로 <span class="text-cyan-400">상담받으세요</span>
+                                                            </h2>
+                                                            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                                                                24시간 언제든지 문의하세요<br>
+                                                                전문 상담사가 친절하게 안내해드립니다
+                                                            </p>
+
+                                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
+                                                                <div class="bg-gray-800 rounded-2xl p-8">
+                                                                    <div class="text-4xl mb-4">📞</div>
+                                                                    <h3 class="text-2xl font-bold mb-3">전화 상담</h3>
+                                                                    <p class="text-3xl font-bold text-green-400 mb-4">010-5925-1600</p>
+                                                                    <p class="text-gray-400">연중무휴 24시간</p>
+                                                                </div>
+                                                                <div class="bg-gray-800 rounded-2xl p-8">
+                                                                    <div class="text-4xl mb-4">💬</div>
+                                                                    <h3 class="text-2xl font-bold mb-3">카카오톡</h3>
+                                                                    <p class="text-3xl font-bold text-yellow-400 mb-4">nmtk12</p>
+                                                                    <p class="text-gray-400">빠른 상담 가능</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                                                <a href="tel:010-5925-1600" 
+                                                                   class="bg-green-500 hover:bg-green-600 text-white px-12 py-6 rounded-full text-2xl font-bold transition-all duration-300 pulse-glow flex items-center gap-4 shadow-2xl">
+                                                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                                                    </svg>
+                                                                    지금 전화하기
+                                                                </a>
+                                                                <a href="https://open.kakao.com/o/ss3EZlDh" target="_blank"
+                                                                   class="bg-yellow-400 hover:bg-yellow-500 text-black px-12 py-6 rounded-full text-2xl font-bold transition-all duration-300 flex items-center gap-4 shadow-2xl">
+                                                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                                        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                                                    </svg>
+                                                                    카톡 상담하기
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                                                    <!-- Footer -->
+                                                    <footer class="bg-black text-gray-400 py-8">
+                                                        <div class="container mx-auto px-6">
+                                                            <!-- 상세 정보 섹션 -->
+                                                            <div class="space-y-3 text-sm leading-relaxed mb-12">
+                                                                <div class="flex flex-wrap items-center gap-2">
+                                                                    <span class="font-semibold text-white">상호명 :</span>
+                                                                    <span>정밀티켓</span>
+                                                                    <span class="text-gray-600 mx-2">ㅣ</span>
+                                                                    <span class="font-semibold text-white">대표전화 :</span>
+                                                                    <a href="tel:010-5925-1600" class="text-green-400 hover:text-green-300 font-medium">010-5925-1600</a>
+                                                                    <span class="text-gray-600 mx-2">ㅣ</span>
+                                                                    <span class="font-semibold text-white">카카오톡 상담ID :</span>
+                                                                    <a href="https://open.kakao.com/o/ss3EZlDh" target="_blank" class="text-yellow-400 hover:text-yellow-300 font-bold">nmtk12</a>
+                                                                </div>
+                                                                <div class="flex flex-wrap items-start gap-2">
+                                                                    <span class="font-semibold text-white">취급상품 :</span>
+                                                                    <span>문화상품, 해피머니, 신용카드 현금화, 정보이용료, 휴대폰 소액결제, 각종 모바일상품권</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- 브랜드 정보 -->
+                                                            <div class="text-center">
+                                                                <div class="text-2xl font-bold text-white mb-3">정밀티켓</div>
+                                                                <p class="mb-3">안전하고 빠른 현금화 전문 서비스</p>
+                                                                <p class="text-sm">© 2025 정밀티켓. All rights reserved.</p>
+                                                            </div>
+                                                        </div>
+                                                    </footer>
+
+                                                    <!-- 플로팅 CTA 버튼 -->
+                                                    <div class="cta-fixed hidden md:block">
+                                                        <a href="tel:010-5925-1600" 
+                                                           class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center w-16 h-16">
+                                                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+
+                                                    <script>
+                                                        // 스무스 스크롤 효과
+                                                        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                                            anchor.addEventListener('click', function (e) {
+                                                                e.preventDefault();
+                                                                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                                                    behavior: 'smooth'
+                                                                });
+                                                            });
+                                                        });
+
+                                                        // 스크롤 애니메이션
+                                                        const observerOptions = {
+                                                            threshold: 0.1,
+                                                            rootMargin: '0px 0px -50px 0px'
+                                                        };
+
+                                                        const observer = new IntersectionObserver((entries) => {
+                                                            entries.forEach(entry => {
+                                                                if (entry.isIntersecting) {
+                                                                    entry.target.style.opacity = '1';
+                                                                    entry.target.style.transform = 'translateY(0)';
+                                                                }
+                                                            });
+                                                        }, observerOptions);
+
+                                                        // 애니메이션 대상 요소들 관찰
+                                                        document.querySelectorAll('.card-hover').forEach(card => {
+                                                            card.style.opacity = '0';
+                                                            card.style.transform = 'translateY(30px)';
+                                                            card.style.transition = 'all 0.6s ease';
+                                                            observer.observe(card);
+                                                        });
+
+                                                        // 전화 번호 클릭 이벤트
+                                                        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                                                            link.addEventListener('click', function() {
+                                                                // 분석용 이벤트 (실제 환경에서는 Google Analytics 등을 사용)
+                                                                console.log('전화 상담 클릭');
+                                                            });
+                                                        });
+
+                                                        // 카카오톡 링크 클릭 이벤트
+                                                        document.querySelectorAll('a[href*="kakao"]').forEach(link => {
+                                                            link.addEventListener('click', function() {
+                                                                console.log('카카오톡 상담 클릭');
+                                                            });
+                                                        });
+
+                                                        // FAQ 토글 기능
+                                                        function toggleFAQ(index) {
+                                                            const allContents = document.querySelectorAll('.faq-content');
+                                                            const allIcons = document.querySelectorAll('.faq-icon');
+                                                            const targetContent = allContents[index - 1];
+                                                            const targetIcon = allIcons[index - 1];
+
+                                                            const isOpen = targetContent.classList.contains('open');
+
+                                                            // 모든 FAQ 닫기
+                                                            allContents.forEach((content, i) => {
+                                                                content.classList.remove('open');
+                                                                content.style.maxHeight = '0px';
+                                                                allIcons[i].style.transform = 'rotate(0deg)';
+                                                            });
+
+                                                            // 클릭한 FAQ가 닫혀있었다면 열기
+                                                            if (!isOpen) {
+                                                                targetContent.classList.add('open');
+                                                                targetContent.style.maxHeight = targetContent.scrollHeight + 'px';
+                                                                targetIcon.style.transform = 'rotate(180deg)';
+                                                            }
+                                                        }
+
+                                                        // DOM 로드 완료 후 FAQ 버튼 이벤트 리스너 추가
+                                                        document.addEventListener('DOMContentLoaded', function() {
+                                                            const faqButtons = document.querySelectorAll('.faq-button');
+                                                            faqButtons.forEach((button, index) => {
+                                                                button.addEventListener('click', function() {
+                                                                    toggleFAQ(index + 1);
+                                                                });
+                                                            });
+                                                        });
+
+                                                        // 실시간 현황 업데이트 애니메이션
+                                                        function updateLiveStatus() {
+                                                            const names = ['김**', '이**', '박**', '최**', '정**', '조**', '윤**', '한**'];
+                                                            const cards = [
+                                                                {icon: '💳', name: '컬쳐랜드상품권', color: 'text-orange-600'},
+                                                                {icon: '📱', name: '휴대폰소액결제', color: 'text-blue-600'},
+                                                                {icon: '⭐', name: 'KB국민카드', color: 'text-yellow-600'},
+                                                                {icon: '💙', name: '우리카드', color: 'text-blue-500'},
+                                                                {icon: '🎁', name: '해피머니상품권', color: 'text-purple-600'},
+                                                                {icon: '💳', name: '신한카드', color: 'text-red-600'},
+                                                                {icon: '🟢', name: '하나카드', color: 'text-green-600'},
+                                                                {icon: '🎯', name: '문화상품권', color: 'text-indigo-600'}
+                                                            ];
+
+                                                            const amounts = [300000, 500000, 800000, 1200000, 1500000, 2000000, 3500000, 5000000, 8000000];
+
+                                                            const rows = document.querySelectorAll('.grid.grid-cols-3.gap-4.py-3.border-b');
+                                                            if (rows.length > 3) { // 헤더 제외하고 데이터 행들만
+                                                                setInterval(() => {
+                                                                    rows.forEach((row, index) => {
+                                                                        if (index > 0) { // 헤더 제외
+                                                                            const randomName = names[Math.floor(Math.random() * names.length)];
+                                                                            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+                                                                            const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
+
+                                                                            const nameEl = row.children[0];
+                                                                            const cardEl = row.children[1];
+                                                                            const amountEl = row.children[2];
+
+                                                                            if (nameEl && cardEl && amountEl) {
+                                                                                // 페이드 아웃
+                                                                                row.style.opacity = '0.3';
+
+                                                                                setTimeout(() => {
+                                                                                    nameEl.textContent = randomName;
+                                                                                    cardEl.innerHTML = `
+                                                                                        <span class="${randomCard.color}">${randomCard.icon}</span>
+                                                                                        <span class="text-gray-600">${randomCard.name}</span>
+                                                                                    `;
+                                                                                    amountEl.innerHTML = `${randomAmount.toLocaleString()}<span class="text-sm">원</span>`;
+
+                                                                                    // 페이드 인
+                                                                                    row.style.opacity = '1';
+                                                                                }, 200);
+                                                                            }
+                                                                        }
+                                                                    });
+                                                                }, 8000); // 8초마다 업데이트
+                                                            }
+                                                        }
+
+                                                        // 페이지 로드 완료 후 애니메이션 시작
+                                                        window.addEventListener('load', function() {
+                                                            document.querySelector('.floating-animation').style.animationDelay = '0.5s';
+                                                            updateLiveStatus();
+                                                        });
+                                                    </script>
+                                                </body>
+                                                </html>
